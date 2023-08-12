@@ -15,6 +15,10 @@
         gap: 32px 14%;
         padding-bottom: 90px;
 
+        @media (max-width: $brkpTablet) {
+            grid-template-columns: 1fr;
+        }
+
         .question {
             @include border;
             padding-bottom: 20px;
@@ -35,7 +39,7 @@
                 border: none;
                 color: $text;
                 font-size: calc($fontMedium - 2px);
-                line-height: 33.6px;
+                line-height: 140%;
                 font-weight: 500;
                 margin-bottom: 20px;
                 padding: 0;
@@ -53,7 +57,7 @@
                 font-size: $fontSmall;
                 color: $secondaryText;
                 font-weight: 400;
-                line-height: 30px;
+                line-height: 150%;
                 margin: 0;
             }
 

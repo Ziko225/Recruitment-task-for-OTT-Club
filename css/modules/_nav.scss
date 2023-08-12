@@ -3,7 +3,7 @@
 @import "./mixins";
 
 @mixin mobileRemover {
-    @media (max-width: $brkpMobile) {
+    @media (max-width: $brkpTablet) {
         display: none;
     }
 }
@@ -15,9 +15,13 @@
     align-items: center;
     margin: 30px auto;
 
-    @media (max-width: $brkpMobile) {
+    @media (max-width: $brkpDesctop) {
+        margin: 23px auto;
+    }
+
+    @media (max-width: $brkpTablet) {
         justify-content: flex-end;
-        margin: 5px auto;
+        margin: 16px auto;
     }
 }
 
@@ -28,17 +32,18 @@
 
 .nav__logo {
     margin-right: auto;
+    width: 96px;
+    height: auto;
 
-    @media (max-width: $brkpTablet) {
+    @media (max-width: $brkpDesctop) {
         width: 72px;
-        height: auto;
     }
 
-    @media (max-width: $brkpMobile) {
+    @media (max-width: $brkpTablet) {
         width: 64px;
     }
 
-    @media (max-width: $brkpMobileMin) {
+    @media (max-width: $brkpMobile) {
         width: 56px;
     }
 }

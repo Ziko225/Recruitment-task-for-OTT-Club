@@ -4,7 +4,7 @@
 @mixin textStyle {
     font-size: calc($fontSmall - 2px);
     font-weight: 400;
-    line-height: 25.2px;
+    line-height: 140%;
     margin-bottom: 10px;
     max-width: 200px;
 }
@@ -23,11 +23,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        @media (max-width: $brkpMobile) {
+            grid-template-columns: 1fr;
+        }
+
         .meta {
             @include flex;
             align-items: flex-start;
             flex-wrap: wrap;
             max-height: 200px;
+
+            @media (max-width: $brkpMobile) {
+                max-height: none;
+            }
 
             .meta__link {
                 @include textStyle;
@@ -42,7 +50,7 @@
             .contacts__title {
                 font-size: $fontSmall;
                 font-weight: 600;
-                line-height: 28px;
+                line-height: 140%;
                 color: $text;
                 margin: 0 0 20px;
                 padding: 0;
@@ -59,10 +67,18 @@
                 grid-template-columns: auto auto 1fr;
                 grid-template-rows: auto auto;
 
+                @media (max-width: $brkpMobile) {
+                    grid-template-columns: 1fr;
+                }
+
                 .support__title {
                     @include textStyle;
                     grid-column-start: span 2;
                     margin-bottom: 20px;
+
+                    @media (max-width: $brkpMobile) {
+                        grid-column-start: 1;
+                    }
                 }
 
                 .support__link {

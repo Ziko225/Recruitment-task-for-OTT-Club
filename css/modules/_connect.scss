@@ -16,6 +16,10 @@
     position: relative;
     padding: 0 100px;
 
+    @media (max-width: $brkpMobile) {
+        background-size: contain;
+    }
+
     .connect__eye {
         grid-column-start: span 2;
         width: 7%;
@@ -41,7 +45,7 @@
         }
 
         .price__subtitle {
-            line-height: 28px
+            line-height: 140%;
         }
     }
 
@@ -70,16 +74,20 @@
     }
 
     .connect__form {
+        display: flex;
         grid-row-start: 3;
         grid-column-start: span 2;
-        display: flex;
+        justify-content: center;
         margin: 42px auto;
+        width: 100%;
     }
 
     .form__input {
-        padding: 20px;
-        width: 400px;
+        padding: 0 20px;
+        height: 100%;
         border: 1px solid #D0D0D1;
+        align-self: center;
+        width: 40%;
     }
 
     .form__button {

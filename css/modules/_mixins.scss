@@ -1,16 +1,24 @@
 @import "../theme";
 
 @mixin container {
-    padding: 0 150px;
+    padding: 0 200px;
     max-width: 1920px;
     height: auto;
     margin: auto;
 
-    @media (max-width: $brkpTablet) {
-        padding: 0 5%;
+    @media (max-width: $brkpDesctop) {
+        padding: 0 12%;
     }
 
-    @media (max-width: $brkpMin) {
+    @media (max-width: $brkpDesctopMin) {
+        padding: 0 48px;
+    }
+
+    @media (max-width: $brkpTablet) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: $brkpMobile) {
         padding: 0 16px;
     }
 }

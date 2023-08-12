@@ -16,12 +16,12 @@
         filter: brightness(100%);
     }
 
-    @media (max-width: $brkpTablet) {
+    @media (max-width: $brkpDesctop) {
         font-size: calc($fontSmall - 4px);
         padding: 11px 24px;
     }
 
-    @media (max-width: $brkpMobileMin) {
+    @media (max-width: $brkpMobile) {
         font-size: calc($fontSmall - 6px);
         padding: 9px 24px;
     }
@@ -40,22 +40,22 @@
         filter: brightness(100%);
     }
 
-    @media (max-width: $brkpTablet) {
+    @media (max-width: $brkpDesctop) {
         font-size: calc($fontttsize - 6px);
         padding: 18px 32px;
     }
 
-    @media (max-width: $brkpTabletMin) {
+    @media (max-width: $brkpDesctopMin) {
         font-size: calc($fontttsize - 8px);
         padding: 16px 28px;
     }
 
-    @media (max-width: $brkpMobile) {
+    @media (max-width: $brkpTablet) {
         font-size: calc($fontttsize - 9px);
         padding: 16px 24px;
     }
 
-    @media (max-width: $brkpMin) {
+    @media (max-width: $brkpMobileMin) {
         font-size: calc($fontttsize - 11px);
         padding: 14px 14px;
     }
@@ -84,6 +84,7 @@
 .withTransform {
     transition: 0.2s;
     margin-top: 6px;
+    padding: 16px 24px;
 
     &:hover {
         transform: translateY(-6px);

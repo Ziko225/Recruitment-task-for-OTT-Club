@@ -3,7 +3,8 @@
 
 .main {
     color: $text;
-    margin-bottom: 90px
+    margin-bottom: 90px;
+    font-weight: 400;
 }
 
 .logoList {
@@ -12,7 +13,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
 }
 
 .section {
@@ -21,21 +22,21 @@
 
     .section__title {
         font-size: calc($fontBig + 4px);
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: 50px;
-        line-height: 72.8px;
-    }
+        line-height: 140%;
+        min-width: 530px;
 
-    .section__title--giant {
-        font-size: calc($fontBig);
-        margin: 70px 0 50px;
+        @media (max-width: $brkpTablet) {
+            min-width: 300px;
+        }
     }
 
     .section__subtitle {
         margin-bottom: 70px;
         color: $secondaryText;
-        font-size: $fontMedium;
-        line-height: 36.4px
+        font-size: $fontSmall;
+        line-height: 150%;
     }
 
     .diferentDevices {
@@ -49,25 +50,144 @@
     flex-basis: 2;
     margin-bottom: 140px;
 
+    @media (max-width: $brkpDesctopMin) {
+        margin-bottom: 75px;
+    }
+
+    @media (max-width: $brkpMobile) {
+        display: none;
+    }
 
     .card {
-        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        max-width: 240px;
+
+        @media (max-width: $brkpDesctopMin) {
+            max-width: 205px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            align-items: center;
+        }
 
         .card__title {
             font-size: calc($fontMedium - 2px);
             margin: 32px 0 16px;
+
+            @media (max-width: $brkpDesctop) {
+                font-size: calc($fontMedium - 8px);
+            }
+
+            @media (max-width: $brkpDesctopMin) {
+                font-size: calc($fontMedium - 10px);
+            }
+
+            @media (max-width: $brkpTablet) {
+                text-align: center;
+                margin: 12px 0;
+            }
         }
 
         .card__text {
             font-size: $fontSmall;
-            font-weight: 400;
-            line-height: 30px
+            line-height: 150%;
+
+            @media (max-width: $brkpDesctop) {
+                font-size: calc($fontMedium - 8px);
+            }
+
+            @media (max-width: $brkpDesctopMin) {
+                font-size: calc($fontMedium - 10px);
+            }
+
+            @media (max-width: $brkpTablet) {
+                display: none;
+            }
+        }
+
+        .card__img {
+            max-width: 96px;
+            height: auto;
+
+            @media (max-width: $brkpDesctop) {
+                max-width: 72px;
+            }
+
+            @media (max-width: $brkpDesctopMin) {
+                max-width: 64px;
+            }
+
+            @media (max-width: $brkpTablet) {
+                max-width: 48px;
+            }
         }
     }
 }
 
 .section--top {
-    margin-bottom: 140px;
+
+    .section__title {
+        font-size: calc($fontBig + 4px);
+        margin: 70px 0 50px;
+        font-weight: 600;
+        line-height: 120%;
+
+        @media (max-width: $brkpDesctop) {
+            font-size: calc($fontBig - 10px);
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: $brkpDesctopMin) {
+            font-size: calc($fontBig - 14px);
+        }
+
+        @media (max-width: $brkpTablet) {
+            font-size: calc($fontBig - 20px);
+            margin: 24px 0;
+        }
+
+        @media (max-width: $brkpMobile) {
+            font-size: calc($fontBig - 24px);
+            margin: 0px 0;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            font-size: calc($fontBig - 28px);
+        }
+    }
+
+    .section__subtitle {
+        margin-bottom: 70px;
+        color: $secondaryText;
+        font-size: $fontMedium;
+        line-height: 140%;
+
+        @media (max-width: $brkpDesctop) {
+            font-size: calc($fontMedium - 6px);
+            margin-bottom: 56px;
+        }
+
+        @media (max-width: $brkpDesctopMin) {
+            font-size: calc($fontMedium - 8px);
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            font-size: calc($fontMedium - 9px);
+            margin-bottom: 34px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            font-size: calc($fontMedium - 10px);
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            font-size: calc($fontMedium - 11px);
+            margin-bottom: 24px;
+        }
+    }
 }
 
 .section--column {
@@ -76,20 +196,55 @@
 
 .section--withImg {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
     overflow: hidden;
     padding-right: 0;
+    margin-bottom: 140px;
+
+    @media (max-width: $brkpDesctop) {}
+
+    @media (max-width: $brkpDesctopMin) {}
+
+    @media (max-width: $brkpTablet) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: $brkpMobile) {
+        grid-template-columns: 1fr;
+        @include container;
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
     .section--withImg__text {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         min-width: 400px;
-        max-width: 700px;
+        max-width: 640px;
+        grid-column: 1;
+        grid-row: 2;
+
+
+
+        @media (max-width: $brkpMobile) {
+            grid-row-start: 3;
+            align-items: center;
+            min-width: 100px;
+        }
     }
 
     .section--withImg__img {
         width: 100%;
-        margin-top: -40px;
+        min-width: 600px;
+        margin: -40px 0 auto 0px;
+        grid-row-start: span 2;
+
+        @media (max-width: $brkpMobile) {
+            min-width: 0;
+            grid-row-start: 2;
+            margin: 0;
+        }
     }
 }
