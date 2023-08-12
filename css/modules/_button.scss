@@ -15,18 +15,49 @@
         transition: 0s;
         filter: brightness(100%);
     }
+
+    @media (max-width: $brkpTablet) {
+        font-size: calc($fontSmall - 4px);
+        padding: 11px 24px;
+    }
+
+    @media (max-width: $brkpMobileMin) {
+        font-size: calc($fontSmall - 6px);
+        padding: 9px 24px;
+    }
 }
 
 .button--primary {
     background-color: $primary;
     border: none;
     font-weight: 600;
-    font-size: $fontMedium;
+    $fontttsize: $fontMedium;
     padding: 24px 40px;
+    font-size: $fontttsize;
 
     &:active {
         background-color: red;
         filter: brightness(100%);
+    }
+
+    @media (max-width: $brkpTablet) {
+        font-size: calc($fontttsize - 6px);
+        padding: 18px 32px;
+    }
+
+    @media (max-width: $brkpTabletMin) {
+        font-size: calc($fontttsize - 8px);
+        padding: 16px 28px;
+    }
+
+    @media (max-width: $brkpMobile) {
+        font-size: calc($fontttsize - 9px);
+        padding: 16px 24px;
+    }
+
+    @media (max-width: $brkpMin) {
+        font-size: calc($fontttsize - 11px);
+        padding: 14px 14px;
     }
 }
 

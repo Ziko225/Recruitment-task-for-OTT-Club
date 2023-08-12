@@ -2,18 +2,48 @@
 @import "../theme";
 @import "./mixins";
 
+@mixin mobileRemover {
+    @media (max-width: $brkpMobile) {
+        display: none;
+    }
+}
+
 .nav {
+    @include container;
     display: flex;
     color: $secondaryText;
-    height: 110px;
-    @include container;
     align-items: center;
+    margin: 30px auto;
+
+    @media (max-width: $brkpMobile) {
+        justify-content: flex-end;
+        margin: 5px auto;
+    }
 }
+
+.nav__regbutton {
+    @include mobileRemover;
+}
+
 
 .nav__logo {
     margin-right: auto;
+
+    @media (max-width: $brkpTablet) {
+        width: 72px;
+        height: auto;
+    }
+
+    @media (max-width: $brkpMobile) {
+        width: 64px;
+    }
+
+    @media (max-width: $brkpMobileMin) {
+        width: 56px;
+    }
 }
 
 .nav__a {
+    @include mobileRemover;
     margin-right: 16px;
 }

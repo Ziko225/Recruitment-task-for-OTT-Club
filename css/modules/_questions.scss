@@ -9,15 +9,15 @@
     flex-direction: column;
 
     .questions__container {
+        @include border;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px 14%;
-        padding-bottom: 100px;
-        @include border;
+        padding-bottom: 90px;
 
         .question {
-            padding-bottom: 20px;
             @include border;
+            padding-bottom: 20px;
             justify-content: flex-start;
 
             &:nth-last-child(2) {

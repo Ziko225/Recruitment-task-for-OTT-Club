@@ -17,6 +17,7 @@
 .footer {
     @include container;
     color: $secondaryText;
+    margin-bottom: 20px;
 
     .footer__wrap {
         display: grid;
@@ -26,6 +27,7 @@
             @include flex;
             align-items: flex-start;
             flex-wrap: wrap;
+            max-height: 200px;
 
             .meta__link {
                 @include textStyle;
@@ -70,7 +72,7 @@
         }
     }
 
-    .footer__wrap--bottom{
+    .footer__wrap--bottom {
         display: flex;
         flex-direction: column;
     }
