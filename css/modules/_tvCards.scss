@@ -1,0 +1,82 @@
+@import "../theme";
+
+.tvCards {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    .tvCards__header {
+        display: flex;
+        flex-direction: column;
+        max-width: 60%;
+        margin-bottom: 50px;
+
+        .header__title {
+            font-size: $fontBig;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .headert__ico {
+            padding: 25px;
+        }
+
+        .header__subtitle {
+            font-size: $fontSmall;
+            font-weight: 400;
+            line-height: 30px;
+        }
+    }
+
+    .tvCards__butonsBlock {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        gap: 24px;
+    }
+
+    .tvCards__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        grid-template-rows: auto auto;
+        grid-auto-rows: 0;
+        gap: 50px 4%;
+        overflow: hidden;
+        margin-bottom: 23px;
+
+        .card {
+            border-radius: 10px;
+            border: 1px solid #C6C6C8;
+            padding: 30px;
+            margin: 0
+        }
+
+        .red {
+            background: var(--gradient-a-red, linear-gradient(180deg, #FF6961 0%, #D70015 100%));
+        }
+
+        .blue {
+            background: var(--gradient-f-dark-blue, linear-gradient(180deg, #409CFF 0%, #0040DD 100%));
+        }
+
+        .yellow {
+            background: var(--gradient-c-yellow, linear-gradient(180deg, #FFD426 0%, #B25000 100%));
+        }
+
+        .green {
+            background: var(--gradient-d-green, linear-gradient(180deg, #30DB5B 0%, #248A3D 100%));
+        }
+
+        .slateblue {
+            background: var(--gradient-g-violet, linear-gradient(180deg, #7D7AFF 0%, #3634A3 100%));
+        }
+    }
+
+    .tvCards__button {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+}

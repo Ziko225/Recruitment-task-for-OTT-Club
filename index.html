@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTT Club</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.webp">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -16,14 +17,238 @@
 
 <body>
     <nav class="nav">
-        <img src="./img/logo.png" alt="logo">
-        <a><img src="./img/facebook.svg" alt="fb"></a>
-        <a><img src="./img/telegram.svg" alt="telegram"></a>
-        <button class="button">Регистрация</button>
+        <img class="nav__logo" src="./img/logo.webp" alt="logo">
+        <a target="_blank" class="nav__a" href="https://www.facebook.com/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                    <path
+                        d="M14.0848 21.7208C18.7988 20.7562 22.3448 16.5853 22.3448 11.5862C22.3448 5.87287 17.7133 1.24133 12 1.24133C6.28669 1.24133 1.65515 5.87287 1.65515 11.5862C1.65515 16.5346 5.12965 20.6716 9.77215 21.6905V14.2154H7.44826V11.1394H9.77215V8.51213C9.77215 6.4476 11.1449 4.55168 14.308 4.55168C15.5886 4.55168 16.5357 4.67102 16.5357 4.67102L16.461 7.54345C16.461 7.54345 15.4952 7.53431 14.4413 7.53431C13.3007 7.53431 13.1179 8.04529 13.1179 8.89339V11.1394H16.5517L16.4023 14.2154H13.1179V21.8713C13.445 21.8361 13.7676 21.7857 14.0848 21.7208Z"
+                        fill="currentColor" />
+                </g>
+            </svg>
+        </a>
+        <a target="_blank" class="nav__a" href="https://web.telegram.org/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.3448 11.5862C22.3448 17.2991 17.7129 21.931 12 21.931C6.28705 21.931 1.65515 17.2991 1.65515 11.5862C1.65515 5.87323 6.28705 1.24133 12 1.24133C17.7129 1.24133 22.3448 5.87323 22.3448 11.5862ZM12.3707 8.8784C11.3646 9.29651 9.35343 10.1629 6.33791 11.4767C5.84825 11.6715 5.59136 11.862 5.56808 12.0482C5.52843 12.3637 5.92325 12.4879 6.45946 12.656C6.53274 12.6793 6.6086 12.7025 6.68619 12.7284C7.21463 12.9 7.92498 13.1008 8.29394 13.1086C8.62929 13.1155 9.00343 12.9775 9.41636 12.6948C12.2336 10.7922 13.6879 9.83099 13.7793 9.8103C13.8439 9.79564 13.9336 9.77668 13.9939 9.83099C14.0543 9.88444 14.0483 9.98616 14.0422 10.0137C14.0026 10.1801 12.456 11.6189 11.6543 12.3637C11.4043 12.5956 11.2276 12.7603 11.1914 12.7982C11.1103 12.8819 11.0276 12.962 10.9483 13.0387C10.4569 13.5112 10.0896 13.8663 10.9689 14.4456C11.3914 14.7241 11.7293 14.9543 12.0664 15.1836C12.4345 15.4344 12.8017 15.6844 13.2776 15.9965C13.3983 16.0758 13.5138 16.1577 13.6267 16.2379C14.0552 16.5439 14.4405 16.8181 14.9164 16.775C15.1922 16.7491 15.4784 16.4896 15.6233 15.7146C15.9655 13.8818 16.6396 9.91288 16.7957 8.27668C16.8052 8.14083 16.7994 8.00434 16.7784 7.86978C16.7659 7.7611 16.713 7.6611 16.6302 7.58961C16.5069 7.48875 16.3155 7.4672 16.2293 7.46892C15.8405 7.47582 15.2439 7.68357 12.3707 8.8784Z"
+                        fill="currentColor" />
+                </g>
+            </svg>
+        </a>
+        <button class="button button--secondary">Регистрация</button>
         <button class="button">Войти</button>
     </nav>
-    <main>
+    <main class="main">
+        <section class="section section--withImg">
+            <div class="section--withImg__text">
+                <h1 class="section__title section__title--giant">Более 270 телеканалов в прямом эфире</h1>
+                <span class="section__subtitle">Национальные, познавательные, детские, кино, спортивные, новостные и
+                    многие другие каналы</span>
+                <button class="button button--primary">Протестировать 7 дней бесплатно</button>
+            </div>
+            <img class="section--withImg__img" src="./img/header-right-picture.webp" />
+        </section>
+        <section class="section section--cards">
+            <article class="card">
+                <img src="./img/gift.svg">
+                <h3 class="card__title">Бесплатный тест</h3>
+                <span class="card__text">7 дней бесплатного тестового просмотра</span>
+            </article>
+            <article class="card">
+                <img src="./img/desktop.svg">
+                <h3 class="card__title">Бесплатный тест</h3>
+                <span class="card__text">7 дней бесплатного тестового просмотра</span>
+            </article>
+            <article class="card">
+                <img src="./img/tv.svg">
+                <h3 class="card__title">Бесплатный тест</h3>
+                <span class="card__text">7 дней бесплатного тестового просмотра</span>
+            </article>
+            <article class="card">
+                <img src="./img/planet.svg">
+                <h3 class="card__title">Бесплатный тест</h3>
+                <span class="card__text">7 дней бесплатного тестового просмотра</span>
+            </article>
+        </section>
+        <section class="section">
+            <div class="connect">
+                <img class="connect__eye" src="./img/eye.webp" alt="eye">
+                <div class="connect__price">
+                    <span class="price__title">1€</span>/ МЕСЯЦ
+                    <span class="price__subtitle"> Покупая подписку более, чем на 6 месяцев</span>
+                </div>
+                <div class="connect__advantages">
+                    <ul class="advantages__ul">
+                        <li class="li">Более 270 каналов</li>
+                        <li class="li">127 FullHD каналов</li>
+                        <li class="li">Режим Ultra TV Sport</li>
+                        <li class="li">Архив каналов</li>
+                        <li class="li">5 устройств</li>
+                    </ul>
+                </div>
+                <form class="connect__form">
+                    <input class="form__input" placeholder="Email">
+                    <button class="form__button button--primary">Подключить тариф</button>
+                </form>
+            </div>
+        </section>
+        <section class="section tvCards">
+            <div class="tvCards__header">
+                <h1 class="header__title">ТВ - каналы<img class="headert__ico" src="./img/lightnings.svg"></h1>
+                <span class="header__subtitle">Национальные, познавательные, детские, кино, спортивные, новостные и
+                    многие другие телеканалы</span>
+            </div>
+            <div class="tvCards__butonsBlock">
+                <button class="button withTransform active">Популярные</button>
+                <button class="button withTransform">Национальные</button>
+                <button class="button withTransform">Познавательные</button>
+                <button class="button withTransform">Кино</button>
+                <button class="button withTransform">Спорт</button>
+                <button class="button withTransform">Детские</button>
+                <button class="button withTransform">Музыкальные</button>
+                <button class="button withTransform">Новостные</button>
+            </div>
+            <div class="tvCards__cards">
+                <button class="card red"><img src="./img/tv_cards/219.png"></button>
+                <button class="card blue"><img src="./img/tv_cards/327.png"></button>
+                <button class="card green"><img src="./img/tv_cards/98.png"></button>
+                <button class="card slateblue"><img src="./img/tv_cards/322.png"></button>
+                <button class="card yellow"><img src="./img/tv_cards/338.png"></button>
+                <button class="card blue"><img src="./img/tv_cards/174.png"></button>
+                <button class="card green"><img src="./img/tv_cards/157.png"></button>
+                <button class="card slateblue"><img src="./img/tv_cards/158.png"></button>
+                <button class="card green"><img src="./img/tv_cards/218.png"></button>
+                <button class="card slateblue"><img src="./img/tv_cards/173.png"></button>
+            </div>
+            <div class="">
+                <button class="button button--secondary buttonBox__button tvCards__button">ПОКАЗАТЬ ВСЕ <img
+                        src="./img/check.svg"></button>
+
+            </div>
+        </section>
+        <section class="section section--withImg">
+            <div class="section--withImg__text">
+                <h2 class="section__title section__title--giant">Смотрите на разных устройствах</h2>
+                <span class="section__subtitle">
+                    Подключайте подписку FULL и смотрите любимые каналы на 5 устройствах, среди которых: телевизор,
+                    компьютер, планшет или смартфон
+                </span>
+                <button class="button button--primary">Протестировать 7 дней бесплатно</button>
+            </div>
+            <img src="./img/devices.webp" class="section--withImg__img">
+        </section>
+        <div class="logoList">
+            <img src="/img/logo/lg.webp">
+            <img src="/img/logo/apple.webp">
+            <img src="/img/logo/android.webp">
+            <img src="/img/logo/samsung.webp">
+        </div>
+        <figure></figure>
+        <section class="section questions">
+            <h2 class="section__title">Популярные вопросы</h2>
+            <div class="questions__container">
+                <div class="question">
+                    <button class="question__button">
+                        Как подключить подписку OTTCLUB или продлить ее?<img class="button__ico" src="./img/check.svg">
+                    </button>
+                    <p class="question__answer">
+                        Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
+                        скорость соединения для стабильного просмотра каналов?
+                    </p>
+                </div>
+                <div class="question">
+                    <button class="question__button">
+                        Как смотреть на телевизоре Samsung?<img class="button__ico" src="./img/check.svg">
+                    </button>
+                    <p class="question__answer invisible">
+                        Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
+                        скорость соединения для стабильного просмотра каналов?
+                    </p>
+                </div>
+                <div class="question">
+                    <button class="question__button">
+                        Как смотреть одновременно на разных устройствах?<img class="button__ico" src="./img/check.svg">
+                    </button>
+                    <p class="question__answer invisible">
+                        Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
+                        скорость соединения для стабильного просмотра каналов?
+                    </p>
+                </div>
+                <div class="question">
+                    <button class="question__button">
+                        Как посмотреть передачу, которая была в эфире ранее?<img class="button__ico"
+                            src="./img/check.svg">
+                    </button>
+                    <p class="question__answer invisible">
+                        Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
+                        скорость соединения для стабильного просмотра каналов?
+                    </p>
+                </div>
+                <div class="question">
+                    <button class="question__button">
+                        Какая скорость соединения необходима для просмотра каналов?<img class="button__ico"
+                            src="./img/check.svg">
+                    </button>
+                    <p class="question__answer invisible">
+                        Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
+                        скорость соединения для стабильного просмотра каналов?
+                    </p>
+                </div>
+                <div class="question">
+                    <button class="question__button">
+                        Как работает бесплатный тестовый период?<img class="button__ico" src="./img/check.svg">
+                    </button>
+                    <p class="question__answer invisible">
+                        Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
+                        скорость соединения для стабильного просмотра каналов?
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__wrap">
+            <div class="meta">
+                <a target="_blank" class="meta__link" href="https://www.ottclub.tv/ua/about/">О нас</a>
+                <a target="_blank" class="meta__link" href="https://www.ottclub.tv/ua/agreement/">Пользовательское
+                    соглашение</a>
+                <a target="_blank" class="meta__link" href="https://www.ottclub.tv/ua/privacy_policy/">Политика
+                    конфиденциальности</a>
+                <a target="_blank" class="meta__link" href="https://www.ottclub.tv/ua/providers/">ТВ-Каналам</a>
+                <a target="_blank" class="meta__link" href="https://www.ottclub.tv/ua/speedtest/">Проверка скорости</a>
+                <a target="_blank" class="meta__link" href="https://www.ottclub.tv/ua/term/">Правила оформления
+                    подписки</a>
+            </div>
+            <div class="contacts">
+                <h4 class="contacts__title">Помощь</h4>
+                <a class="contacts__link" href="tel:+442045772169">+442045772169&nbsp;(Англия)</a>
+                <a class="contacts__link" href="tel:+420255708953">+420255708953&nbsp;(Европа)</a>
+                <a class="contacts__link" href="tel:+97233751723">+97233751723&nbsp;(Израиль)</a>
+                <a class="contacts__link" href="mailto:support@ottclub.cc">support@ottclub.cc</a>
+                <div class="support">
+                    <span class="support__title">Чат-поддержка</span>
+                    <a target="_blank" class="support__link" href="https://www.whatsapp.com/"><img
+                            src="./img/whatsapp.svg"></a>
+                    <a target="_blank" class="support__link" href="https://web.telegram.org/"><img
+                            src="./img/telegram.svg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__wrap footer__wrap--bottom">
+            <div class="payment">
+                <img src="./img/payment/visa.webp" alt="payment visa" class="payment__img" />
+                <img src="./img/payment/mastercard.webp" alt="payment mastercard" class="payment__img" />
+                <img src="./img/payment/freekasa.webp" alt="payment free kassa" class="payment__img" />
+                <img src="./img/payment/sera.webp" alt="payment sera" class="payment__img" />
+                <img src="./img/payment/sepa.webp" alt="payment sepa" class="payment__img" />
+            </div>
+            <div class="companyNumber">
+                <span>© 2021-2022 COMPANY NAME</span> ●
+                <span>Company number 1221514</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

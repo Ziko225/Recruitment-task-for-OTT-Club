@@ -1,0 +1,84 @@
+@import "../theme";
+
+.connect {
+    display: grid;
+    margin: 0 auto 125px;
+    background-image: url("../../img/border.svg");
+    background-size: cover;
+    border-bottom: 3px solid $primary;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    position: relative;
+    padding: 0 100px;
+
+    .connect__eye {
+        grid-column-start: span 2;
+        width: 7%;
+        margin: 20px auto 20px;
+        font-weight: 400;
+    }
+
+    .connect__price {
+        font-size: $fontSmall;
+        max-width: 250px;
+        color: $secondaryText;
+        text-align: center;
+
+        .price__title {
+            display: inline-block;
+            font-size: 90px;
+            color: $primary;
+            font-weight: 600;
+        }
+
+        .price__subtitle {
+            line-height: 28px
+        }
+    }
+
+    .connect__advantages {
+        font-size: $fontMedium;
+        margin-left: 40px;
+
+        .advantages__ul {
+            padding: 0;
+            list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 32 32" fill="none"><path d="M5.33337 15.4118L12.6275 22.7059L26 9.33334" stroke="%23EEC63B"  stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+
+            &::marker {
+                transform: translateY(-5px);
+            }
+
+            .li {
+                margin-bottom: 26px;
+                margin-left: 35px;
+
+                &::marker {
+                    font-size: 1.9em;
+                    line-height: 0;
+                }
+            }
+        }
+    }
+
+    .connect__form {
+        grid-row-start: 3;
+        grid-column-start: span 2;
+        display: flex;
+        margin: 42px auto;
+    }
+
+    .form__input {
+        padding: 20px;
+        width: 400px;
+        border: 1px solid #D0D0D1;
+    }
+
+    .form__button {
+        color: $text;
+    }
+}

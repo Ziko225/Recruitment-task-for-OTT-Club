@@ -1,3 +1,19 @@
 @import "./button";
+@import "../theme";
+@import "./mixins";
 
-.nav {}
+.nav {
+    display: flex;
+    color: $secondaryText;
+    height: 110px;
+    @include container;
+    align-items: center;
+}
+
+.nav__logo {
+    margin-right: auto;
+}
+
+.nav__a {
+    margin-right: 16px;
+}

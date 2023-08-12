@@ -1,14 +1,50 @@
 @import "./modules/nav";
+@import "./modules/main";
+@import "./modules/card";
+@import "./modules/connect";
+@import "./modules/tvCards";
+@import "./modules/questions";
+@import "./modules/footer";
+@import "./theme";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #333;
+    background-color: #131212;
+    background-position: bottom;
+    background-size: cover;
+    background-image: url("../img/bg.webp");
+    background-repeat: no-repeat;
 }
 
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: $secondaryText;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+
+    &:active {
+        color: $primary;
+        filter: brightness(100%);
+    }
 }
 
 button {
     cursor: pointer;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+
+    &:active {
+        filter: brightness(100%);
+    }
 }

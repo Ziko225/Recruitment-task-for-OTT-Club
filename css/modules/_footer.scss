@@ -1,0 +1,89 @@
+@import "../theme";
+@import "./mixins";
+
+@mixin textStyle {
+    font-size: calc($fontSmall - 2px);
+    font-weight: 400;
+    line-height: 25.2px;
+    margin-bottom: 10px;
+    max-width: 200px;
+}
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    @include container;
+    color: $secondaryText;
+
+    .footer__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .meta {
+            @include flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .meta__link {
+                @include textStyle;
+            }
+        }
+
+        .contacts {
+            @include flex;
+            margin-left: auto;
+            max-width: fit-content;
+
+            .contacts__title {
+                font-size: $fontSmall;
+                font-weight: 600;
+                line-height: 28px;
+                color: $text;
+                margin: 0 0 20px;
+                padding: 0;
+            }
+
+            .contacts__link {
+                @include textStyle;
+                align-items: flex-start;
+            }
+
+            .support {
+                margin-top: 50px;
+                display: grid;
+                grid-template-columns: auto auto 1fr;
+                grid-template-rows: auto auto;
+
+                .support__title {
+                    @include textStyle;
+                    grid-column-start: span 2;
+                    margin-bottom: 20px;
+                }
+
+                .support__link {
+                    grid-row-start: 2;
+                }
+            }
+        }
+    }
+
+    .footer__wrap--bottom{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: auto;
+        gap: 25px
+    }
+
+    .companyNumber {
+        margin-left: auto;
+    }
+}

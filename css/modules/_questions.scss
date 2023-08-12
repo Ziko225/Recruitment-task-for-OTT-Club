@@ -1,0 +1,67 @@
+@import "../theme";
+
+@mixin border {
+    border-bottom: 2px solid #fff3;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+
+    .questions__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 14%;
+        padding-bottom: 100px;
+        @include border;
+
+        .question {
+            padding-bottom: 20px;
+            @include border;
+            justify-content: flex-start;
+
+            &:nth-last-child(2) {
+                border: none;
+            }
+
+            &:last-child {
+                border: none;
+            }
+
+            .question__button {
+                display: flex;
+                text-align: start;
+                background: none;
+                border: none;
+                color: $text;
+                font-size: calc($fontMedium - 2px);
+                line-height: 33.6px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                padding: 0;
+                width: 100%;
+
+                .button__ico {
+                    margin: 0 0 auto auto;
+                    filter: brightness(1000%);
+                    width: 32px;
+                    height: auto;
+                }
+            }
+
+            .question__answer {
+                font-size: $fontSmall;
+                color: $secondaryText;
+                font-weight: 400;
+                line-height: 30px;
+                margin: 0;
+            }
+
+            .invisible {
+                display: none;
+                grid-row: span 4;
+            }
+        }
+    }
+
+}

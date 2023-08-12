@@ -1,0 +1,67 @@
+@import "../theme";
+@import "./mixins";
+
+.main {
+    color: $text;
+}
+
+.logoList{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include container;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.section {
+    display: flex;
+    @include container;
+
+    .section__title {
+        font-size: calc($fontBig + 4px);
+        font-weight: 600;
+        margin-bottom: 50px;
+        line-height: 72.8px;
+    }
+
+    .section__title--giant {
+        font-size: calc($fontBig);
+        margin: 70px 0 50px;
+    }
+
+    .section__subtitle {
+        margin-bottom: 70px;
+        color: $secondaryText;
+        font-size: $fontMedium;
+        line-height: 36.4px
+    }
+}
+
+.section--column {
+    flex-direction: column;
+}
+
+.section--cards {
+    gap: 32px;
+}
+
+.section--withImg {
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow: hidden;
+    padding-right: 0;
+
+    .section--withImg__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 400px;
+        max-width: 700px;
+    }
+
+    .section--withImg__img {
+        width: 100%;
+        margin-top: -40px;
+    }
+}
