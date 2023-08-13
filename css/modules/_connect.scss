@@ -1,12 +1,11 @@
 @import "../theme";
 
 $border: 2px solid #F82225;
-$borderTop: 1px solid #F82225;
 
 .connect {
     display: grid;
     margin: 50px auto 125px;
-    border-radius: 15px;
+    border-radius: 16px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto auto;
     min-width: 1150px;
@@ -54,34 +53,38 @@ $borderTop: 1px solid #F82225;
         display: block;
         position: absolute;
         top: 0%;
-        width: 515px;
-        border-top: $borderTop;
-        right: 9px;
-        border-radius: 10px;
+        width: 525px;
+        border-top: $border;
+        right: 0px;
+        height: 35px;
+        border-top-right-radius: 14px;
 
         @media (max-width: $brkpDesktop) {
-            width: 389px;
+            width: 398px;
         }
 
         @media (max-width: $brkpDesktopMin) {
-            width: 358px;
+            width: 367px;
         }
 
         @media (max-width: $brkpTablet) {
-            width: 301px;
+            width: 310.5px;
         }
 
         @media (max-width: $brkpMobile) {
-            width: 129px;
+            width: 138.4px;
         }
 
         @media (max-width: $brkpMobileMin) {
-            width: 102px
+            width: 111px
         }
     }
 
     &::before {
-        left: 9px;
+        left: 0px;
+        display: block;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 0;
     }
 
     .form-wrap {

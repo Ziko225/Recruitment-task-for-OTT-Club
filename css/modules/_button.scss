@@ -79,11 +79,3 @@
         filter: brightness(100%);
     }
 }
-
-$array: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M10.668 14.6719L16.0013 18.5119L21.3346 14.6719' stroke='red' stroke-width='2.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-
-.withArray {
-    &::after {
-        content: $array
-    }
-}

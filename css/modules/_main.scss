@@ -6,6 +6,14 @@
     margin-bottom: 90px;
     font-weight: 400;
 
+    @media (max-width: $brkpDesktop) {
+        margin-bottom: 64px;
+    }
+
+    @media (max-width: $brkpMobileMin) {
+        margin-bottom: 48px;
+    }
+
     .section {
         @include container;
         display: flex;
@@ -107,7 +115,6 @@
     }
 
     .section--top {
-
         margin-bottom: 140px;
 
         @media (max-width: $brkpDesktop) {
