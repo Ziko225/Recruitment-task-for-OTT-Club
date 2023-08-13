@@ -1,9 +1,30 @@
 @import "../theme";
+@import "./mixins";
 
 .tvCards {
     display: flex;
     flex-direction: column;
     margin-bottom: 190px;
+
+    @media (max-width: $brkpDesktop) {
+        margin-bottom: 140px;
+    }
+
+    @media (max-width: $brkpDesktopMin) {
+        margin-bottom: 110px;
+    }
+
+    @media (max-width: $brkpTablet) {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: $brkpMobile) {
+        margin-bottom: 52px;
+    }
+
+    @media (max-width: $brkpMobileMin) {
+        margin-bottom: 34px;
+    }
 
     .tvCards__header {
         display: flex;
@@ -11,44 +32,130 @@
         max-width: 60%;
         margin-bottom: 50px;
 
-        .header__title {
-            font-size: $fontBig;
-            font-weight: 500;
-            margin-bottom: 20px;
+        @media (max-width: $brkpMobile) {
+            max-width: 100%;
+            align-items: center;
+            text-align: center;
         }
 
-        .headert__ico {
-            padding: 25px;
+        .header__title {
+            @include title;
+            font-weight: 500;
+            margin-bottom: 20px;
+            white-space: nowrap;
+        }
+
+        .header__ico {
+            padding: 25px 20px;
+
+            @media (max-width: $brkpDesktop) {
+                width: 48px;
+                min-width: min-content;
+                height: auto;
+            }
+
+            @media (max-width: $brkpMobile) {
+                width: 40px;
+                padding: 20px 15px;
+            }
         }
 
         .header__subtitle {
-            font-size: $fontSmall;
-            font-weight: 400;
-            line-height: 150%;
+            @include subTitle;
         }
     }
 
     .tvCards__butonsBlock {
-        overflow: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+
+        @media (max-width: $brkpDesktopMin) {
+            gap: 24px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            gap: 16px;
+        }
+
+        .butonsBlock__button {
+            transition: 0.2s;
+            margin-top: 6px;
+            padding: 16px 24px;
+
+
+            @media (max-width: $brkpDesktop) {
+                padding: 12px 18px;
+            }
+
+            &:hover {
+                transform: translateY(-6px);
+            }
+        }
     }
 
     .tvCards__cards {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: auto auto;
         grid-auto-rows: 0;
-        gap: 50px 4%;
-        overflow: hidden;
-        margin-bottom: 23px;
+        column-gap: 50px;
+        overflow-y: hidden;
+
+        @media (max-width: $brkpDesktop) {
+            column-gap: 3vw;
+        }
+
+        @media (max-width: $brkpTablet) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: $brkpMobile) {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         .card {
             border-radius: 10px;
             border: 1px solid #C6C6C8;
-            padding: 30px;
-            margin: 0
+            padding: 32px;
+            margin-bottom: 50px;
+
+            @media (max-width: $brkpDesktop) {
+                margin-bottom: 32px;
+                padding: 24px;
+            }
+
+            @media (max-width: $brkpDesktopMin) {
+                padding: 21px;
+            }
+
+            @media (max-width: $brkpMobile) {
+                padding: 14px;
+                margin-bottom: 16px;
+            }
+
+            @media (max-width: $brkpMobileMin) {
+                padding: 11px;
+            }
+
+            .card__img {
+                width: auto;
+                height: auto;
+
+                @media (max-width: $brkpDesktop) {
+                    width: 8vw;
+                }
+
+                @media (max-width: $brkpMobile) {
+                    width: 13vw;
+                }
+            }
         }
 
         .red {

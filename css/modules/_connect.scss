@@ -1,30 +1,135 @@
 @import "../theme";
 
+$border: 2px solid $primary;
+$borderTop: 1px solid $primary;
+
 .connect {
     display: grid;
-    margin: 0 auto 125px;
-    background-image: url("../../img/border.svg");
-    background-size: cover;
-    border-bottom: 3px solid $primary;
+    margin: 50px auto 125px;
     border-radius: 15px;
-    background-repeat: no-repeat;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto auto;
-    width: 100%;
-    max-width: 1150px;
-    height: auto;
+    min-width: 1150px;
+    padding: 0;
+    border-bottom: $border;
+    border-right: $border;
+    border-left: $border;
     position: relative;
-    padding: 0 100px;
+
+    @media (max-width: $brkpDesktop) {
+        min-width: 862px;
+        margin: 33px auto 104px;
+    }
+
+    @media (max-width: $brkpDesktopMin) {
+        min-width: 800px;
+        margin-bottom: 99px;
+    }
+
+    @media (max-width: $brkpTablet) {
+        min-width: 688px;
+        margin-bottom: 80px;
+    }
 
     @media (max-width: $brkpMobile) {
-        background-size: contain;
+        width: 343px;
+        min-width: min-content;
+        display: flex;
+        flex-direction: column;
+        padding: 0 23.5px;
+        margin-bottom: 52px;
+    }
+
+    @media (max-width: $brkpMobileMin) {
+        width: 288px;
+        max-width: none;
+        padding: 0 16px;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0%;
+        width: 515px;
+        border-top: $borderTop;
+        right: 9px;
+        border-radius: 10px;
+
+        @media (max-width: $brkpDesktop) {
+            width: 389px;
+        }
+
+        @media (max-width: $brkpDesktopMin) {
+            width: 358px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            width: 301px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            width: 129px;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            width: 102px
+        }
+    }
+
+    &::before {
+        left: 9px;
+    }
+
+    .form-wrap {
+        padding: 50px 16px 32px 16px;
+    }
+
+    .circle {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 50px;
+        border-radius: 100px 100px 0 0;
+        border-top: $border;
+        border-left: $border;
+        border-right: $border;
+
+        @media (max-width: $brkpDesktop) {
+            width: 66px;
+            height: 33px;
+            top: -33px;
+        }
     }
 
     .connect__eye {
         grid-column-start: span 2;
-        width: 7%;
-        margin: 25px auto 20px;
+        margin: -30px auto 20px;
         font-weight: 400;
+
+        @media (max-width: $brkpDesktop) {
+            max-width: 54px;
+            margin-top: -20px;
+        }
+
+        @media (max-width: $brkpDesktop) {
+            max-width: 50px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            max-width: 46px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            max-width: 44px;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            max-width: 40px;
+        }
     }
 
     .connect__price {
@@ -36,12 +141,32 @@
         color: $secondaryText;
         text-align: center;
 
+        @media (max-width: $brkpDesktop) {
+            font-size: calc($fontSmall - 4px);
+            margin-right: 50px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            margin-right: 20px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            margin: 0;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            font-size: calc($fontSmall - 5px)
+        }
 
         .price__title {
             display: inline-block;
             font-size: 90px;
             color: $primary;
             font-weight: 600;
+
+            @media (max-width: $brkpDesktop) {
+                font-size: 67px;
+            }
         }
 
         .price__subtitle {
@@ -52,6 +177,28 @@
     .connect__advantages {
         font-size: $fontMedium;
         margin-left: 40px;
+
+        @media (max-width: $brkpDesktop) {
+            font-size: calc($fontMedium - 6px)
+        }
+
+        @media (max-width: $brkpDesktopMin) {
+            font-size: calc($fontMedium - 8px);
+            letter-spacing: 0.18px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            font-size: calc($fontMedium - 10px);
+            letter-spacing: 0.32px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            margin: auto;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            font-size: calc($fontMedium - 11px);
+        }
 
         .advantages__ul {
             padding: 0;
@@ -66,7 +213,7 @@
                 margin-left: 35px;
 
                 &::marker {
-                    font-size: 1.9em;
+                    font-size: 1.6em;
                     line-height: 0;
                 }
             }
@@ -80,6 +227,12 @@
         justify-content: center;
         margin: 42px auto;
         width: 100%;
+
+        @media (max-width: $brkpMobile) {
+            flex-direction: column;
+            align-items: stretch;
+            margin: auto auto 32px;
+        }
     }
 
     .form__input {
@@ -88,9 +241,42 @@
         border: 1px solid #D0D0D1;
         align-self: center;
         width: 40%;
+        font-size: 24px;
+        opacity: 0.9;
+        border-radius: 5px 0px 0px 5px;
+
+        @media (max-width: $brkpDesktop) {
+            padding: 0 16px;
+            font-size: 22px;
+        }
+
+        @media (max-width: $brkpDesktopMin) {
+            font-size: 18px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            font-size: 17px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            padding: 15px 16px;
+            margin-bottom: 16px;
+            border-radius: 5px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            font-size: 15px;
+        }
     }
 
     .form__button {
         color: $text;
+        border-radius: 0px 5px 5px 0px;
+
+        @media (max-width: $brkpMobile) {
+            border-radius: 5px;
+        }
     }
 }
