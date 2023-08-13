@@ -8,12 +8,37 @@
     display: flex;
     flex-direction: column;
 
+    .question__title {
+        margin-bottom: 65px;
+
+        @media (max-width: $brkpDesktop) {
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: $brkpDesktopMin) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            margin-bottom: 24px;
+        }
+    }
+
     .questions__container {
         @include border;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px 212px;
         padding-bottom: 73px;
+        align-items: start;
 
         @media (max-width: $brkpDesktop) {
             gap: 24px 178px;
@@ -22,7 +47,6 @@
 
         @media (max-width: $brkpDesktopMin) {
             column-gap: 32px;
-            
         }
 
         @media (max-width: $brkpTablet) {
@@ -32,6 +56,7 @@
 
         @media (max-width: $brkpMobile) {
             grid-template-columns: 1fr;
+            gap: 0;
             padding-bottom: 30px;
         }
 
@@ -48,10 +73,13 @@
                 margin-bottom: 20px;
             }
 
-            &:nth-last-child(2) {
-                border: none;
-                @media (max-width: $brkpMobile) {
-                    @include border;
+            .container--top {
+                .question--midleOnMobile {
+                    @media (max-width: $brkpTablet) {
+                        &:last-child {
+                            @include border;
+                        }
+                    }
                 }
             }
 
@@ -71,9 +99,11 @@
                 margin-bottom: 27px;
                 padding: 0;
                 width: 100%;
+                min-height: 67px;
 
                 @media (max-width: $brkpDesktop) {
                     font-size: calc($fontMedium - 8px);
+                    min-height: 50px;
                 }
 
                 @media (max-width: $brkpMobile) {
@@ -108,6 +138,15 @@
             .invisible {
                 display: none;
                 grid-row: span 4;
+            }
+        }
+
+        .question--mobileMiddle {
+
+            &:last-child {
+                @media (max-width: $brkpMobile) {
+                    @include border;
+                }
             }
         }
     }

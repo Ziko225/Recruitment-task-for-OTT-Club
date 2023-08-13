@@ -18,18 +18,18 @@ $borderTop: 1px solid $primary;
 
     @media (max-width: $brkpDesktop) {
         min-width: 862px;
-        margin: 33px auto 54px;
+        margin: 33px auto 70px;
     }
 
     @media (max-width: $brkpDesktopMin) {
         min-width: 800px;
-        margin-bottom: 49px;
+        margin-bottom: 60px;
     }
 
     @media (max-width: $brkpTablet) {
         width: 688px;
         min-width: 688px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 
     @media (max-width: $brkpMobile) {
@@ -38,7 +38,7 @@ $borderTop: 1px solid $primary;
         display: flex;
         flex-direction: column;
         padding: 0 23.5px;
-        margin-bottom: 12px;
+        margin-bottom: 35px;
     }
 
     @media (max-width: $brkpMobileMin) {
