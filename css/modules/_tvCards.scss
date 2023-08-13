@@ -1,5 +1,5 @@
 @import "../theme";
-@import "./mixins";
+@import "../mixins";
 
 .tvCards {
     display: flex;
@@ -7,15 +7,15 @@
     margin-bottom: 190px;
 
     @media (max-width: $brkpDesktop) {
-        margin-bottom: 140px;
+        margin-bottom: 120px;
     }
 
     @media (max-width: $brkpDesktopMin) {
-        margin-bottom: 110px;
+        margin-bottom: 90px;
     }
 
     @media (max-width: $brkpTablet) {
-        margin-bottom: 80px;
+        margin-bottom: 70px;
     }
 
     @media (max-width: $brkpMobile) {
@@ -43,6 +43,19 @@
             font-weight: 500;
             margin-bottom: 20px;
             white-space: nowrap;
+            margin-top: 0;
+
+            @media (max-width: $brkpTablet) {
+                margin-bottom: 16px;
+            }
+
+            @media (max-width: $brkpMobile) {
+                margin-bottom: 13px;
+            }
+
+            @media (max-width: $brkpMobileMin) {
+                margin-bottom: 8px;
+            }
         }
 
         .header__ico {

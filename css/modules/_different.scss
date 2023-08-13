@@ -1,0 +1,67 @@
+@import "../theme";
+
+.section--differentDevices {
+    margin-bottom: calc(140px - 40px);
+
+    @media (max-width: $brkpDesktop) {
+        margin-bottom: calc(115px - 40px)
+    }
+
+    @media (max-width: $brkpDesktopMin) {
+        margin-bottom: calc(99px - 40px)
+    }
+
+    @media (max-width: $brkpTablet) {
+        margin-bottom: calc(72px - 40px)
+    }
+
+    @media (max-width: $brkpMobile) {
+        margin-bottom: 45px;
+    }
+
+    .differentDevices__header {
+        margin-bottom: 60px;
+
+        @media (max-width: $brkpDesktop) {
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: $brkpDesktopMin) {
+            margin-bottom: 40px;
+            min-width: 550px;
+        }
+
+        @media (max-width: $brkpTablet) {
+            margin-bottom: 32px;
+            min-width: 400px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            min-width: auto;
+            margin-bottom: 18px;
+        }
+
+        .section__title {
+            margin-bottom: 30px;
+
+            @media (max-width: $brkpDesktop) {
+                margin-bottom: 24px;
+            }
+
+            @media (max-width: $brkpMobile) {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    .differentDevices__button {
+        grid-row: 2;
+        align-self: start;
+        justify-self: start;
+
+        @media (max-width: $brkpMobile) {
+            justify-self: center;
+            grid-row: 3;
+        }
+    }
+}

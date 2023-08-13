@@ -18,30 +18,32 @@ $borderTop: 1px solid $primary;
 
     @media (max-width: $brkpDesktop) {
         min-width: 862px;
-        margin: 33px auto 104px;
+        margin: 33px auto 54px;
     }
 
     @media (max-width: $brkpDesktopMin) {
         min-width: 800px;
-        margin-bottom: 99px;
+        margin-bottom: 49px;
     }
 
     @media (max-width: $brkpTablet) {
+        width: 688px;
         min-width: 688px;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
     }
 
     @media (max-width: $brkpMobile) {
         width: 343px;
-        min-width: min-content;
+        min-width: 343px;
         display: flex;
         flex-direction: column;
         padding: 0 23.5px;
-        margin-bottom: 52px;
+        margin-bottom: 12px;
     }
 
     @media (max-width: $brkpMobileMin) {
         width: 288px;
+        min-width: 288px;
         max-width: none;
         padding: 0 16px;
     }

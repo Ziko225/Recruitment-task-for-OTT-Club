@@ -1,0 +1,67 @@
+@import "./theme";
+
+@mixin container {
+    padding: 0 220px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: $brkpDesktop) {
+        padding: 0 12vw;
+    }
+
+    @media (max-width: $brkpDesktopMin) {
+        padding: 0 48px;
+    }
+
+    @media (max-width: $brkpTablet) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: $brkpMobile) {
+        padding: 0 16px;
+    }
+}
+
+@mixin title {
+    font-size: calc($fontBig);
+    font-weight: 500;
+    line-height: 140%;
+    opacity: 0.9;
+
+    @media (max-width: $brkpDesktop) {
+        font-size: calc($fontBig - 12px);
+    }
+
+    @media (max-width: $brkpDesktopMin) {
+        font-size: calc($fontBig - 16px);
+    }
+
+    @media (max-width: $brkpTablet) {
+        font-size: calc($fontBig - 22px);
+    }
+
+    @media (max-width: $brkpMobile) {
+        font-size: calc($fontBig - 24px);
+        margin: 0 auto 15px;
+    }
+
+    @media (max-width: $brkpMobileMin) {
+        font-size: calc($fontBig - 28px);
+    }
+}
+
+@mixin subTitle {
+    font-size: $fontSmall;
+    line-height: 140%;
+    color: $text;
+    opacity: 0.8;
+
+    @media (max-width: $brkpDesktop) {
+        font-size: calc($fontSmall - 4px);
+    }
+
+    @media (max-width: $brkpMobileMin) {
+        font-size: calc($fontSmall - 5px);
+    }
+}

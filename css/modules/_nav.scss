@@ -1,6 +1,6 @@
 @import "./button";
 @import "../theme";
-@import "./mixins";
+@import "../mixins";
 
 @mixin mobileRemover {
     @media (max-width: $brkpTablet) {
@@ -15,7 +15,7 @@
     align-items: center;
     margin: 30px auto;
 
-    @media (max-width: $brkpDesctop) {
+    @media (max-width: $brkpDesktop) {
         margin: 23px auto;
     }
 
@@ -35,7 +35,7 @@
     width: 96px;
     height: auto;
 
-    @media (max-width: $brkpDesctop) {
+    @media (max-width: $brkpDesktop) {
         width: 72px;
     }
 
