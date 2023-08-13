@@ -7,6 +7,10 @@
     line-height: 140%;
     margin-bottom: 10px;
     max-width: 200px;
+
+    @media (max-width: $brkpDesktop) {
+        font-size: calc($fontSmall - 6px);
+    }
 }
 
 @mixin flex {
@@ -28,24 +32,66 @@
         }
 
         .meta {
-            @include flex;
-            align-items: flex-start;
+            display: grid;
             flex-wrap: wrap;
-            max-height: 200px;
+            min-width: min-content;
+            grid-template-rows: repeat(4, auto) 1fr;
 
             @media (max-width: $brkpMobile) {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: $brkpMobileMin) {
                 max-height: none;
             }
 
             .meta__link {
                 @include textStyle;
+                grid-column: 1;
+
+
+                @mixin gridOneLine {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+
+                &:nth-last-child(2) {
+                    grid-column: 2;
+                    grid-row: 1;
+
+                    @media (max-width: $brkpMobileMin) {
+                        @include gridOneLine;
+                    }
+                }
+
+                &:last-child {
+                    grid-column: 2;
+                    grid-row: 2;
+
+                    @media (max-width: $brkpMobileMin) {
+                        @include gridOneLine;
+                    }
+                }
             }
         }
 
         .contacts {
             @include flex;
             margin-left: auto;
-            max-width: fit-content;
+            margin-bottom: 50px;
+
+            @media (max-width: $brkpMobile) {
+                flex-wrap: wrap;
+                margin-left: 0;
+                margin-bottom: 35px;
+                width: 100%;
+                max-height: 170px;
+            }
+
+            @media (max-width: $brkpMobileMin) {
+                max-height: none;
+            }
 
             .contacts__title {
                 font-size: $fontSmall;
@@ -54,31 +100,42 @@
                 color: $text;
                 margin: 0 0 20px;
                 padding: 0;
+
+                @media (max-width: $brkpDesktop) {
+                    font-size: calc($fontSmall - 4px);
+                }
             }
 
             .contacts__link {
                 @include textStyle;
                 align-items: flex-start;
+
+                &:nth-last-child(2) {
+                    margin-bottom: 32px;
+
+                    @media (max-width: $brkpMobile) {
+                        margin-bottom: 4px;
+                    }
+                }
             }
 
             .support {
-                margin-top: 50px;
                 display: grid;
                 grid-template-columns: auto auto 1fr;
                 grid-template-rows: auto auto;
 
                 @media (max-width: $brkpMobile) {
-                    grid-template-columns: 1fr;
+                    margin-left: auto;
+                }
+
+                @media (max-width: $brkpMobileMin) {
+                    margin-left: 0;
                 }
 
                 .support__title {
                     @include textStyle;
                     grid-column-start: span 2;
                     margin-bottom: 20px;
-
-                    @media (max-width: $brkpMobile) {
-                        grid-column-start: 1;
-                    }
                 }
 
                 .support__link {
@@ -98,10 +155,41 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-right: auto;
-        gap: 25px
+        gap: 25px;
+        margin-bottom: 35px;
+
+        .payment__img {
+            width: min-content;
+            height: 40px;
+
+            @media (max-width: $brkpDesktop) {
+                height: 32px;
+            }
+        }
     }
 
     .companyNumber {
         margin-left: auto;
+        font-size: 15px;
+
+        @media (max-width: $brkpDesktop) {
+            font-size: 11px;
+        }
+
+        @media (max-width: $brkpMobile) {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: auto;
+            gap: 4px;
+        }
+
+        .dot {
+            padding: 0 5px;
+
+            @media (max-width: $brkpMobile) {
+                display: none;
+            }
+        }
     }
 }

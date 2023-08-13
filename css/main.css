@@ -1244,7 +1244,7 @@
 @media (max-width: 768px) {
   .questions .questions__container {
     grid-template-columns: 1fr;
-    padding-bottom: 67px;
+    padding-bottom: 30px;
   }
 }
 @media (max-width: 375px) {
@@ -1363,13 +1363,19 @@
   }
 }
 .footer .footer__wrap .meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
   flex-wrap: wrap;
-  max-height: 200px;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  grid-template-rows: repeat(4, auto) 1fr;
 }
 @media (max-width: 768px) {
+  .footer .footer__wrap .meta {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 375px) {
   .footer .footer__wrap .meta {
     max-height: none;
   }
@@ -1380,13 +1386,52 @@
   line-height: 140%;
   margin-bottom: 10px;
   max-width: 200px;
+  grid-column: 1;
+}
+@media (max-width: 1920px) {
+  .footer .footer__wrap .meta .meta__link {
+    font-size: 14px;
+  }
+}
+.footer .footer__wrap .meta .meta__link:nth-last-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+@media (max-width: 375px) {
+  .footer .footer__wrap .meta .meta__link:nth-last-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+.footer .footer__wrap .meta .meta__link:last-child {
+  grid-column: 2;
+  grid-row: 2;
+}
+@media (max-width: 375px) {
+  .footer .footer__wrap .meta .meta__link:last-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 .footer .footer__wrap .contacts {
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .footer .footer__wrap .contacts {
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-bottom: 35px;
+    width: 100%;
+    max-height: 170px;
+  }
+}
+@media (max-width: 375px) {
+  .footer .footer__wrap .contacts {
+    max-height: none;
+  }
 }
 .footer .footer__wrap .contacts .contacts__title {
   font-size: 20px;
@@ -1396,6 +1441,11 @@
   margin: 0 0 20px;
   padding: 0;
 }
+@media (max-width: 1920px) {
+  .footer .footer__wrap .contacts .contacts__title {
+    font-size: 16px;
+  }
+}
 .footer .footer__wrap .contacts .contacts__link {
   font-size: 18px;
   font-weight: 400;
@@ -1404,15 +1454,32 @@
   max-width: 200px;
   align-items: flex-start;
 }
+@media (max-width: 1920px) {
+  .footer .footer__wrap .contacts .contacts__link {
+    font-size: 14px;
+  }
+}
+.footer .footer__wrap .contacts .contacts__link:nth-last-child(2) {
+  margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .footer .footer__wrap .contacts .contacts__link:nth-last-child(2) {
+    margin-bottom: 4px;
+  }
+}
 .footer .footer__wrap .contacts .support {
-  margin-top: 50px;
   display: grid;
   grid-template-columns: auto auto 1fr;
   grid-template-rows: auto auto;
 }
 @media (max-width: 768px) {
   .footer .footer__wrap .contacts .support {
-    grid-template-columns: 1fr;
+    margin-left: auto;
+  }
+}
+@media (max-width: 375px) {
+  .footer .footer__wrap .contacts .support {
+    margin-left: 0;
   }
 }
 .footer .footer__wrap .contacts .support .support__title {
@@ -1424,9 +1491,9 @@
   grid-column-start: span 2;
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1920px) {
   .footer .footer__wrap .contacts .support .support__title {
-    grid-column-start: 1;
+    font-size: 14px;
   }
 }
 .footer .footer__wrap .contacts .support .support__link {
@@ -1442,9 +1509,43 @@
   justify-content: center;
   margin-right: auto;
   gap: 25px;
+  margin-bottom: 35px;
+}
+.footer .payment .payment__img {
+  width: -moz-min-content;
+  width: min-content;
+  height: 40px;
+}
+@media (max-width: 1920px) {
+  .footer .payment .payment__img {
+    height: 32px;
+  }
 }
 .footer .companyNumber {
   margin-left: auto;
+  font-size: 15px;
+}
+@media (max-width: 1920px) {
+  .footer .companyNumber {
+    font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .footer .companyNumber {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    gap: 4px;
+  }
+}
+.footer .companyNumber .dot {
+  padding: 0 5px;
+}
+@media (max-width: 768px) {
+  .footer .companyNumber .dot {
+    display: none;
+  }
 }
 
 *,
@@ -1460,6 +1561,16 @@ body {
   background-size: cover;
   background-image: url("../img/bg.webp");
   background-repeat: no-repeat;
+}
+@media (max-width: 990px) {
+  body {
+    background-image: url("../img/bg990.webp");
+  }
+}
+@media (max-width: 410px) {
+  body {
+    background-image: url("../img/bg375.webp");
+  }
 }
 
 a {

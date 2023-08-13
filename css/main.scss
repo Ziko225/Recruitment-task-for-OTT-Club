@@ -20,6 +20,14 @@ body {
     background-size: cover;
     background-image: url("../img/bg.webp");
     background-repeat: no-repeat;
+
+    @media (max-width: 990px) {
+        background-image: url("../img/bg990.webp");
+    }
+
+    @media (max-width: 410px) {
+        background-image: url("../img/bg375.webp");
+    }
 }
 
 a {
