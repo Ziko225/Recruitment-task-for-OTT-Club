@@ -1,7 +1,7 @@
 @import "../theme";
 
-$border: 2px solid $primary;
-$borderTop: 1px solid $primary;
+$border: 2px solid #F82225;
+$borderTop: 1px solid #F82225;
 
 .connect {
     display: grid;
@@ -275,6 +275,7 @@ $borderTop: 1px solid $primary;
 
     .form__button {
         color: $text;
+        background-color: #FF1F1F;
         border-radius: 0px 5px 5px 0px;
 
         @media (max-width: $brkpMobile) {
