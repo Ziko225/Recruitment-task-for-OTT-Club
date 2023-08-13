@@ -1054,6 +1054,7 @@
 }
 .tvCards .tvCards__header .header__ico {
   padding: 25px 20px;
+  margin-right: -70px;
 }
 @media (max-width: 1920px) {
   .tvCards .tvCards__header .header__ico {
@@ -1438,7 +1439,7 @@
 @media (max-width: 375px) {
   .footer .footer__wrap .meta .meta__link:nth-last-child(2) {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: auto;
   }
 }
 .footer .footer__wrap .meta .meta__link:last-child {
@@ -1448,7 +1449,7 @@
 @media (max-width: 375px) {
   .footer .footer__wrap .meta .meta__link:last-child {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: auto;
   }
 }
 .footer .footer__wrap .contacts {
@@ -1632,4 +1633,4 @@ button:hover {
 }
 button:active {
   filter: brightness(100%);
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=style.css.map */
