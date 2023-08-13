@@ -12,20 +12,47 @@
         @include border;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 32px 14%;
-        padding-bottom: 90px;
+        gap: 32px 212px;
+        padding-bottom: 73px;
+
+        @media (max-width: $brkpDesktop) {
+            gap: 24px 178px;
+            padding-bottom: 48px;
+        }
+
+        @media (max-width: $brkpDesktopMin) {
+            column-gap: 32px;
+            
+        }
 
         @media (max-width: $brkpTablet) {
+            column-gap: 24px;
+            padding-bottom: 13px;
+        }
+
+        @media (max-width: $brkpMobile) {
             grid-template-columns: 1fr;
+            padding-bottom: 67px;
+        }
+
+        @media (max-width: $brkpMobileMin) {
+            padding-bottom: 28px;
         }
 
         .question {
             @include border;
-            padding-bottom: 20px;
             justify-content: flex-start;
+            margin-bottom: 27px;
+
+            @media (max-width: $brkpTablet) {
+                margin-bottom: 20px;
+            }
 
             &:nth-last-child(2) {
                 border: none;
+                @media (max-width: $brkpMobile) {
+                    @include border;
+                }
             }
 
             &:last-child {
@@ -41,9 +68,17 @@
                 font-size: calc($fontMedium - 2px);
                 line-height: 140%;
                 font-weight: 500;
-                margin-bottom: 20px;
+                margin-bottom: 27px;
                 padding: 0;
                 width: 100%;
+
+                @media (max-width: $brkpDesktop) {
+                    font-size: calc($fontMedium - 8px);
+                }
+
+                @media (max-width: $brkpMobile) {
+                    font-size: calc($fontMedium - 10px);
+                }
 
                 .button__ico {
                     margin: 0 0 auto auto;
@@ -59,6 +94,15 @@
                 font-weight: 400;
                 line-height: 150%;
                 margin: 0;
+                padding-bottom: 27px;
+
+                @media (max-width: $brkpDesktop) {
+                    font-size: calc($fontSmall - 4px);
+                }
+
+                @media (max-width: $brkpMobile) {
+                    font-size: calc($fontSmall - 8px);
+                }
             }
 
             .invisible {

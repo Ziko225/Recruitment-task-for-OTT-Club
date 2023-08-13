@@ -89,11 +89,16 @@
         justify-content: space-between;
         margin-bottom: 50px;
 
+        @media (max-width: $brkpDesktop) {
+            margin-bottom: 40px;
+        }
+
         @media (max-width: $brkpDesktopMin) {
             gap: 24px;
         }
-
+        
         @media (max-width: $brkpMobile) {
+            margin-bottom: 24.5px;
             gap: 16px;
         }
 
