@@ -96,7 +96,7 @@
         @media (max-width: $brkpDesktopMin) {
             gap: 24px;
         }
-        
+
         @media (max-width: $brkpMobile) {
             margin-bottom: 24.5px;
             gap: 16px;
@@ -195,6 +195,10 @@
         .slateblue {
             background: var(--gradient-g-violet, linear-gradient(180deg, #7D7AFF 0%, #3634A3 100%));
         }
+    }
+
+    .show {
+        grid-auto-rows: auto;
     }
 
     .tvCards__button {

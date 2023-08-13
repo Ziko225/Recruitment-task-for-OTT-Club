@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="./js/index.js" defer></script>
 </head>
 
 <body>
@@ -39,6 +40,7 @@
         <button class="button button--secondary nav__regbutton">Регистрация</button>
         <button class="button">Войти</button>
     </nav>
+
     <main class="main">
         <section class="section section--withImg section--top">
             <h1 class="section__title">Более 270 телеканалов в прямом эфире</h1>
@@ -123,10 +125,15 @@
                 <button class="card slateblue"><img class="card__img" src="./img/tv_cards/158.png"></button>
                 <button class="card green"><img class="card__img" src="./img/tv_cards/218.png"></button>
                 <button class="card slateblue"><img class="card__img" src="./img/tv_cards/173.png"></button>
+                <button class="card red"><img class="card__img" src="./img/tv_cards/219.png"></button>
+                <button class="card blue"><img class="card__img" src="./img/tv_cards/327.png"></button>
+                <button class="card green"><img class="card__img" src="./img/tv_cards/98.png"></button>
+                <button class="card slateblue"><img class="card__img" src="./img/tv_cards/322.png"></button>
+                <button class="card yellow"><img class="card__img" src="./img/tv_cards/338.png"></button>
             </div>
             <div class="">
-                <button class="button button--secondary buttonBox__button tvCards__button">ПОКАЗАТЬ ВСЕ <img
-                        src="./img/check.svg">
+                <button id="channal" class="button button--secondary buttonBox__button tvCards__button">ПОКАЗАТЬ ВСЕ
+                    <img src="./img/check.svg">
                 </button>
             </div>
         </section>
@@ -151,57 +158,57 @@
             <h2 class="section__title">Популярные вопросы</h2>
             <div class="questions__container">
                 <div class="question">
-                    <button class="question__button">
+                    <button id="1" class="question__button">
                         Как подключить подписку OTTCLUB или продлить ее?<img class="button__ico" src="./img/check.svg">
                     </button>
-                    <p class="question__answer">
+                    <p id="a1" class="question__answer">
                         Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
                         скорость соединения для стабильного просмотра каналов?
                     </p>
                 </div>
                 <div class="question">
-                    <button class="question__button">
+                    <button id="2" class="question__button">
                         Как смотреть на телевизоре Samsung?<img class="button__ico" src="./img/check.svg">
                     </button>
-                    <p class="question__answer invisible">
+                    <p id="a2" class="question__answer invisible">
                         Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
                         скорость соединения для стабильного просмотра каналов?
                     </p>
                 </div>
                 <div class="question">
-                    <button class="question__button">
+                    <button id="3" class="question__button">
                         Как смотреть одновременно на разных устройствах?<img class="button__ico" src="./img/check.svg">
                     </button>
-                    <p class="question__answer invisible">
+                    <p id="a3" class="question__answer invisible">
                         Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
                         скорость соединения для стабильного просмотра каналов?
                     </p>
                 </div>
                 <div class="question">
-                    <button class="question__button">
+                    <button id="4" class="question__button">
                         Как посмотреть передачу, которая была в эфире ранее?<img class="button__ico"
                             src="./img/check.svg">
                     </button>
-                    <p class="question__answer invisible">
+                    <p id="a4" class="question__answer invisible">
                         Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
                         скорость соединения для стабильного просмотра каналов?
                     </p>
                 </div>
                 <div class="question">
-                    <button class="question__button">
+                    <button id="5" class="question__button">
                         Какая скорость соединения необходима для просмотра каналов?<img class="button__ico"
                             src="./img/check.svg">
                     </button>
-                    <p class="question__answer invisible">
+                    <p id="a5" class="question__answer invisible">
                         Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
                         скорость соединения для стабильного просмотра каналов?
                     </p>
                 </div>
                 <div class="question">
-                    <button class="question__button">
+                    <button id="6" class="question__button">
                         Как работает бесплатный тестовый период?<img class="button__ico" src="./img/check.svg">
                     </button>
-                    <p class="question__answer invisible">
+                    <p id="a6" class="question__answer invisible">
                         Какая необходима скорость соединения для стабильного просмотра каналов? Какая необходима
                         скорость соединения для стабильного просмотра каналов?
                     </p>
@@ -209,6 +216,7 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer__wrap">
             <div class="meta">

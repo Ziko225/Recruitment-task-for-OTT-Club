@@ -1204,6 +1204,9 @@
 .tvCards .tvCards__cards .slateblue {
   background: var(--gradient-g-violet, linear-gradient(180deg, #7D7AFF 0%, #3634A3 100%));
 }
+.tvCards .show {
+  grid-auto-rows: auto;
+}
 .tvCards .tvCards__button {
   margin-left: auto;
   display: flex;
