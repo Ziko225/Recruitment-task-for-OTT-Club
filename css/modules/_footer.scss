@@ -106,11 +106,15 @@
                 @include textStyle;
                 align-items: flex-start;
 
+                @media (max-width: $brkpMobile) {
+                    margin-bottom: 8px;
+                }
+
                 &:nth-last-child(2) {
                     margin-bottom: 32px;
 
                     @media (max-width: $brkpMobile) {
-                        margin-bottom: 4px;
+                        margin-bottom: 20px;
                     }
                 }
             }
@@ -132,10 +136,18 @@
                     @include textStyle;
                     grid-column-start: span 2;
                     margin-bottom: 20px;
+
+                    @media (max-width: $brkpDesktop) {
+                        margin-bottom: 8px;
+                    }
                 }
 
                 .support__link {
                     grid-row-start: 2;
+
+                    @media (max-width: $brkpDesktop) {
+                        max-height: 32px;
+                    }
                 }
             }
         }
