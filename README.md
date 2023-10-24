@@ -1,4 +1,4 @@
-## This project was created specifically for ottclub.tv
+## Recruitment task
 
 * Written in vanilla html with simple JS interaction ✔
 
@@ -10,8 +10,7 @@
 
 #### Created with love.
 
-Author: *Nazar Bychyk*  
-Design by: *ottclub.tv*
+Author: *Nazar Bychyk*
 
 ---
 # Demo
